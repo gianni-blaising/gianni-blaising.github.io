@@ -7,15 +7,7 @@ redirect_from:
   - /about.html
 ---
 
----
-layout: single
-title: "Research Log: The Brunn-Minkowski Inequality"
-author_profile: true
-sidebar:
-  nav: "docs"
----
 
-*Student Researcher: Gianni Blaising | Sorbonne University | 4EU+ Alliance*
 
 ---
 
