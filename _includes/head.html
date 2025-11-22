@@ -15,7 +15,7 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 
-<!-- 1. MOTEUR MATHJAX (Pour afficher les maths) -->
+<!-- 1. MOTEUR MATHJAX (Pour les maths) -->
 <script>
   window.MathJax = {
     tex: {
@@ -27,45 +27,30 @@
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<!-- 2. STYLES PERSONNALISÉS -->
+<!-- 2. STYLE FORCE (LIGHT MODE & CLEAN) -->
 <style>
-  /* CACHE LE PIED DE PAGE ET LE SITEMAP */
-  .page__footer {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  /* SUPPRIMER LE NOM EN HAUT ET LA LIGNE BLANCHE */
-  .masthead .site-title {
-    display: none !important; /* Cache "Gianni Blaising" en haut */
-  }
-  .masthead {
-    border-bottom: none !important; /* Enlève la ligne blanche */
-    background: transparent !important; /* Rend le fond transparent */
-    display: none !important; /* Sécurité supplémentaire */
-  }
-
-  /* REGLER L'ESPACEMENT DE LA BARRE LATERALE */
-  .sidebar {
-    padding-top: 0px !important; 
-  }
+  /* === SUPPRESSIONS === */
+  /* Cache le pied de page et le sitemap */
+  .page__footer { display: none !important; visibility: hidden !important; height: 0 !important; padding: 0 !important; margin: 0 !important; }
   
-  .author__bio {
-    margin-bottom: 10px !important;
-    font-size: 0.9em !important;
-  }
-  .author__urls-wrapper {
-    padding: 0 !important;
-    margin-bottom: 60px !important; /* Espace avant le menu */
-  }
-  .author__urls li {
-    line-height: 1.2 !important;
-  }
+  /* Supprimer la barre du haut */
+  .masthead { display: none !important; }
+  
+  /* Cacher les titres de sections du menu */
+  .nav__list .nav__title { display: none !important; }
 
-  /* RENDRE LE MENU PLUS GROS ET DISTINCT */
+  /* === MISE EN PAGE === */
+  /* Espacer la photo et les infos du menu */
+  .author__urls-wrapper { margin-bottom: 60px !important; }
+  
+  /* Décoller la barre latérale du haut */
+  .sidebar { padding-top: 0px !important; }
+  
+  /* Bio plus petite */
+  .author__bio { margin-bottom: 10px !important; font-size: 0.9em !important; }
+  .author__urls li { line-height: 1.2 !important; }
+
+  /* === MENU LATÉRAL (STYLE PRO) === */
   .nav__list .nav__items {
     font-family: sans-serif;
     margin-top: 30px !important;
@@ -74,76 +59,51 @@
   .nav__list .nav__items a {
     display: block !important;
     font-size: 1.3em !important;      
-    font-weight: 900 !important;      
+    font-weight: 800 !important;      
     text-transform: uppercase !important; 
     letter-spacing: 1px !important;   
     padding: 12px 0 !important;       
-    color: #b0b0b0 !important;        /* Gris clair par défaut */
-    border-bottom: 1px solid #444 !important; 
+    color: #555555 !important;        /* Gris foncé (Mode Clair) */
+    border-bottom: 1px solid #eee !important; 
     text-decoration: none !important;
   }
   
   .nav__list .nav__items a:hover {
-    color: #ffffff !important;        /* Blanc pur au survol */
+    color: #000000 !important;        /* Noir au survol */
     padding-left: 10px !important;    
+    background-color: #f0f0f0 !important; /* Fond léger au survol */
     transition: all 0.3s ease;
   }
 
-  /* Titres de sections cachés */
-  .nav__list .nav__title {
-    display: none !important;
-  }
-
-  /* --- RÈGLES DU MODE SOMBRE --- */
-  
-  /* Fond et texte principal */
-  body.dark-mode, body.dark-mode .page__content {
-    background-color: #1a1a1a !important; 
-    color: #e0e0e0 !important; 
-  }
-
-  /* La Sidebar */
-  body.dark-mode .sidebar {
-    background-color: #242424 !important;
-    border-right: 1px solid #333 !important;
-  }
-
-  /* Les titres en BLANC (Correction demandée) */
-  body.dark-mode h1, 
-  body.dark-mode h2, 
-  body.dark-mode h3, 
-  body.dark-mode h4,
-  body.dark-mode .page__title {
-    color: #ffffff !important;
-    font-weight: 700 !important;
-    margin-top: 1.5em !important;
+  /* === FORCER LE MODE CLAIR (LIGHT MODE) === */
+  body {
+    background-color: #ffffff !important;
+    color: #333333 !important;
   }
   
-  /* Ajustement taille titres */
-  body.dark-mode h1 { font-size: 2.2em !important; border-bottom: 1px solid #444; }
-  body.dark-mode h2 { font-size: 1.8em !important; color: #a5d6ff !important; /* Bleu clair */ }
-
-  /* Gras en blanc */
-  body.dark-mode strong, body.dark-mode b {
-    font-weight: 900 !important;
-    color: #fff !important;
+  /* Sidebar grise claire */
+  .sidebar {
+    background-color: #f8f9fa !important;
+    border-right: 1px solid #eaeaea !important;
   }
 
-  /* Liens dans le texte */
-  body.dark-mode a {
-    color: #64b5f6 !important;
+  /* Contenu principal */
+  .page__content {
+    background-color: #ffffff !important;
   }
-  /* Liens du menu latéral */
-  body.dark-mode .nav__list .nav__items a {
-    color: #e0e0e0 !important;
-  }
-  body.dark-mode .nav__list .nav__items a:hover {
-    color: #fff !important;
+
+  /* Titres en noir/gris */
+  h1, h2, h3, h4, .page__title {
+    color: #222 !important;
   }
   
-  /* Les boîtes blanches (articles) deviennent transparentes */
-  body.dark-mode .archive__item-teaser, 
-  body.dark-mode .archive__item {
-    background-color: transparent !important;
+  /* Liens texte */
+  a { color: #0077cc !important; }
+  
+  /* Code blocks fond gris */
+  pre, code {
+    background-color: #f6f8fa !important;
+    color: #24292e !important;
+    border: 1px solid #eaeaea !important;
   }
 </style>
