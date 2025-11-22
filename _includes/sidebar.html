@@ -1,60 +1,70 @@
-{% include base_path %}
+{% assign base_path = site.baseurl %}
 
 {% if page.author_profile or layout.author_profile or page.sidebar %}
   <div class="sidebar sticky">
-  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
-  {% if page.sidebar %}
-    {% for s in page.sidebar %}
-      {% if s.image %}
-        <img src=
-        {% if s.image contains "://" %}
-          "{{ s.image }}"
-        {% else %}
-          "{{ s.image | prepend: "/images/" | prepend: base_path }}"
-        {% endif %}
-        alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
-      {% endif %}
-      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
-      {% if s.text %}{{ s.text | markdownify }}{% endif %}
-    {% endfor %}
-    {% if page.sidebar.nav %}
-      {% include nav_list nav=page.sidebar.nav %}
+    {% if page.author_profile or layout.author_profile %}
+      {% include author-profile.html %}
     {% endif %}
-  {% endif %}
+
+    {% if page.sidebar %}
+      {% for s in page.sidebar %}
+        {% if s.image %}
+          <img src="{% if s.image contains '://' %}{{ s.image }}{% else %}{{ s.image | prepend: '/images/' | prepend: base_path }}{% endif %}"
+               alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
+        {% endif %}
+        {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
+        {% if s.text %}{{ s.text | markdownify }}{% endif %}
+      {% endfor %}
+
+      {% if page.sidebar.nav %}
+        {% include nav_list nav=page.sidebar.nav %}
+      {% endif %}
+    {% endif %}
   </div>
 {% endif %}
 
-<!-- BOUTON DARK MODE FLOTTANT (BAS GAUCHE) -->
 <div style="position: fixed; bottom: 30px; left: 30px; z-index: 9999;">
-  <button id="my-theme-toggle" aria-label="Toggle Dark Mode" style="background: none; border: 2px solid #555; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s;">
-    <i class="fas fa-moon" id="my-theme-icon" style="font-size: 1.2em; color: #fff;"></i>
+  <button id="my-theme-toggle" aria-label="Toggle Dark Mode" style="background: #fff; border: 2px solid #555; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <i class="fas fa-moon" id="my-theme-icon" style="font-size: 1.2em; color: #333;"></i>
   </button>
 </div>
 
 <script>
-  // Script autonome pour gérer le mode sombre
-  const btn = document.getElementById("my-theme-toggle");
-  const icon = document.getElementById("my-theme-icon");
-  const body = document.body;
+  (function() {
+    const btn = document.getElementById("my-theme-toggle");
+    const icon = document.getElementById("my-theme-icon");
+    const body = document.body;
 
-  // Vérifier la mémoire au chargement
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode"); // Applique la classe définie dans head.html
-    icon.className = "fas fa-sun";   // Change l'icône en soleil
-    btn.style.borderColor = "#fff";
-  }
-
-  btn.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    
-    if (body.classList.contains("dark-mode")) {
-      localStorage.setItem("theme", "dark");
-      icon.className = "fas fa-sun";
-      btn.style.borderColor = "#fff";
-    } else {
-      localStorage.setItem("theme", "light");
-      icon.className = "fas fa-moon";
-      btn.style.borderColor = "#555";
+    // Fonction pour appliquer le style visuel au bouton
+    function updateButtonStyle(isDark) {
+      if (isDark) {
+        icon.className = "fas fa-sun";
+        icon.style.color = "#fff";      // Soleil blanc
+        btn.style.background = "#333";  // Fond bouton sombre
+        btn.style.borderColor = "#fff"; // Bordure blanche
+      } else {
+        icon.className = "fas fa-moon";
+        icon.style.color = "#333";      // Lune sombre
+        btn.style.background = "#fff";  // Fond bouton blanc
+        btn.style.borderColor = "#555"; // Bordure grise
+      }
     }
-  });
+
+    // 1. Vérification au démarrage
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "dark") {
+      body.classList.add("dark-mode");
+      updateButtonStyle(true);
+    }
+
+    // 2. Action au clic
+    btn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const isDarkMode = body.classList.contains("dark-mode");
+
+      // Mise à jour du localStorage et du style du bouton
+      localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+      updateButtonStyle(isDarkMode);
+    });
+  })();
 </script>
