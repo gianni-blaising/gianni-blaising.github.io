@@ -1,21 +1,11 @@
 ---
 permalink: /
-title: "GB"
+title: "ROADMAP"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-
-permalink: /
-title: "About Me"
-excerpt: "About Me"
-author_profile: true
-redirect_from:
-
-/about/
-
-/about.html
 
 Welcome
 
