@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 
-
+![Convex Geometry](../images/convex%20geom.png)
 ---
 
 
