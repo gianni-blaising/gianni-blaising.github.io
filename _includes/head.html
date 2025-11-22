@@ -1,8 +1,10 @@
+{% include base_path %}
+
 <meta charset="utf-8">
 
 {% include seo.html %}
 
-<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ site.baseurl }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,107 +12,8 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-
-<style>
-  /* --- 1. VOS STYLES PRÉCÉDENTS --- */
-  
-  /* Cache le pied de page et le sitemap */
-  .page__footer {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  /* Supprimer la barre du haut */
-  .masthead {
-    display: none !important;
-  }
-
-  /* Espacer la photo et les infos du menu */
-  .author__urls-wrapper {
-    margin-bottom: 60px !important; 
-  }
-  
-  /* Style du menu de navigation */
-  .nav__list .nav__items {
-    font-family: sans-serif;
-  }
-  
-  .nav__list .nav__items a {
-    display: block !important;
-    font-size: 1.8em !important;      /* J'ai augmenté la taille (avant c'était 1.4em) */
-    font-weight: 800 !important;      
-    text-transform: uppercase !important; 
-    letter-spacing: 2px !important;   
-    padding: 15px 0 !important;       
-    color: #b0b0b0 !important;        
-    border-bottom: none !important;   /* J'ai mis "none" pour supprimer la ligne */
-    text-decoration: none !important;
-  }
-  
-  .nav__list .nav__items a:hover {
-    color: #ffffff !important;        
-    padding-left: 10px !important;    
-    transition: all 0.3s ease;
-  }
-
-  /* Cacher les titres de sections */
-  .nav__list .nav__title {
-    display: none !important;
-  }
-
-  /* Indiquer que la photo de profil est cliquable */
-  .author__avatar img {
-    cursor: pointer;
-  }
-
-
-  /* --- 2. LE NOUVEAU CODE : DARK MODE --- */
-  
-  /* Fond et texte principal en mode sombre */
-  body.dark-mode {
-    background-color: #121212 !important; /* Noir profond */
-    color: #e0e0e0 !important;            /* Gris clair */
-  }
-
-  /* La barre latérale (sidebar) en mode sombre */
-  body.dark-mode .sidebar {
-    background-color: #1e1e1e !important; /* Un peu plus clair que le fond */
-  }
-
-  /* Les liens en mode sombre (pour qu'ils soient lisibles) */
-  body.dark-mode a {
-    color: #64b5f6 !important; /* Bleu clair */
-  }
-  
-  /* Les liens du menu latéral au survol en mode sombre */
-  body.dark-mode .nav__list .nav__items a:hover {
-    color: #64b5f6 !important;
-  }
-
-  /* Titres en blanc */
-  body.dark-mode h1, 
-  body.dark-mode h2, 
-  body.dark-mode h3,
-  body.dark-mode h4 {
-    color: #ffffff !important;
-  }
-
-  /* Zones de code ou citations en mode sombre */
-  body.dark-mode code,
-  body.dark-mode pre {
-    background-color: #2d2d2d !important;
-    color: #f8f8f2 !important;
-  }
-  
-  /* Cartes/Articles (si présents) */
-  body.dark-mode .archive__item-teaser {
-    background-color: #1e1e1e !important;
-  }
-</style>
+<!-- For all browsers -->
+<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 
 <!-- 1. MOTEUR MATHJAX (Pour afficher les maths) -->
 <script>
@@ -124,36 +27,123 @@
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<!-- 2. AMÉLIORATION DU STYLE (Pour rendre le Markdown joli) -->
+<!-- 2. STYLES PERSONNALISÉS -->
 <style>
-  /* Rendre les titres bien visibles et structurés */
-  body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4 {
-    color: #ffffff !important;
-    font-weight: 700 !important;
-    margin-top: 1.5em !important; /* Espace avant le titre */
-    margin-bottom: 0.5em !important; /* Espace après */
-    line-height: 1.2 !important;
+  /* CACHE LE PIED DE PAGE ET LE SITEMAP */
+  .page__footer {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* SUPPRIMER LE NOM EN HAUT ET LA LIGNE BLANCHE */
+  .masthead .site-title {
+    display: none !important; /* Cache "Gianni Blaising" en haut */
+  }
+  .masthead {
+    border-bottom: none !important; /* Enlève la ligne blanche */
+    background: transparent !important; /* Rend le fond transparent */
+    display: none !important; /* Sécurité supplémentaire */
+  }
+
+  /* REGLER L'ESPACEMENT DE LA BARRE LATERALE */
+  .sidebar {
+    padding-top: 0px !important; 
   }
   
-  /* Tailles spécifiques pour la hiérarchie */
-  body.dark-mode h1 { font-size: 2.2em !important; border-bottom: 1px solid #444; padding-bottom: 10px; }
-  body.dark-mode h2 { font-size: 1.8em !important; color: #a5d6ff !important; /* Un bleu clair pour les H2 */ }
-  body.dark-mode h3 { font-size: 1.4em !important; color: #d2a8ff !important; /* Un violet clair pour les H3 */ }
+  .author__bio {
+    margin-bottom: 10px !important;
+    font-size: 0.9em !important;
+  }
+  .author__urls-wrapper {
+    padding: 0 !important;
+    margin-bottom: 60px !important; /* Espace avant le menu */
+  }
+  .author__urls li {
+    line-height: 1.2 !important;
+  }
 
-  /* Rendre le gras VRAIMENT gras */
+  /* RENDRE LE MENU PLUS GROS ET DISTINCT */
+  .nav__list .nav__items {
+    font-family: sans-serif;
+    margin-top: 30px !important;
+  }
+  
+  .nav__list .nav__items a {
+    display: block !important;
+    font-size: 1.3em !important;      
+    font-weight: 900 !important;      
+    text-transform: uppercase !important; 
+    letter-spacing: 1px !important;   
+    padding: 12px 0 !important;       
+    color: #b0b0b0 !important;        /* Gris clair par défaut */
+    border-bottom: 1px solid #444 !important; 
+    text-decoration: none !important;
+  }
+  
+  .nav__list .nav__items a:hover {
+    color: #ffffff !important;        /* Blanc pur au survol */
+    padding-left: 10px !important;    
+    transition: all 0.3s ease;
+  }
+
+  /* Titres de sections cachés */
+  .nav__list .nav__title {
+    display: none !important;
+  }
+
+  /* --- RÈGLES DU MODE SOMBRE --- */
+  
+  /* Fond et texte principal */
+  body.dark-mode, body.dark-mode .page__content {
+    background-color: #1a1a1a !important; 
+    color: #e0e0e0 !important; 
+  }
+
+  /* La Sidebar */
+  body.dark-mode .sidebar {
+    background-color: #242424 !important;
+    border-right: 1px solid #333 !important;
+  }
+
+  /* Les titres en BLANC (Correction demandée) */
+  body.dark-mode h1, 
+  body.dark-mode h2, 
+  body.dark-mode h3, 
+  body.dark-mode h4,
+  body.dark-mode .page__title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    margin-top: 1.5em !important;
+  }
+  
+  /* Ajustement taille titres */
+  body.dark-mode h1 { font-size: 2.2em !important; border-bottom: 1px solid #444; }
+  body.dark-mode h2 { font-size: 1.8em !important; color: #a5d6ff !important; /* Bleu clair */ }
+
+  /* Gras en blanc */
   body.dark-mode strong, body.dark-mode b {
     font-weight: 900 !important;
     color: #fff !important;
   }
 
-  /* Aérer les paragraphes */
-  body.dark-mode p, body.dark-mode ul, body.dark-mode ol {
-    margin-bottom: 1.2em !important;
-    line-height: 1.7 !important; /* Texte plus lisible */
-    font-size: 1.05em !important;
+  /* Liens dans le texte */
+  body.dark-mode a {
+    color: #64b5f6 !important;
   }
-
-  /* Styliser les listes à puces */
-  body.dark-mode ul { padding-left: 20px !important; }
-  body.dark-mode li { margin-bottom: 0.5em !important; }
+  /* Liens du menu latéral */
+  body.dark-mode .nav__list .nav__items a {
+    color: #e0e0e0 !important;
+  }
+  body.dark-mode .nav__list .nav__items a:hover {
+    color: #fff !important;
+  }
+  
+  /* Les boîtes blanches (articles) deviennent transparentes */
+  body.dark-mode .archive__item-teaser, 
+  body.dark-mode .archive__item {
+    background-color: transparent !important;
+  }
 </style>
