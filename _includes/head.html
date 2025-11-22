@@ -15,7 +15,7 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 
-<!-- 1. MOTEUR MATHJAX (Pour les maths) -->
+<!-- MOTEUR MATHJAX -->
 <script>
   window.MathJax = {
     tex: {
@@ -27,35 +27,24 @@
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<!-- 2. STYLE FORCE (LIGHT MODE & CLEAN) -->
+<!-- STYLE FORCE LIGHT MODE -->
 <style>
-  /* === SUPPRESSIONS === */
-  /* Cache le pied de page et le sitemap */
-  .page__footer { display: none !important; visibility: hidden !important; height: 0 !important; padding: 0 !important; margin: 0 !important; }
-  
-  /* Supprimer la barre du haut */
+  /* 1. SUPPRESSIONS */
+  .page__footer { display: none !important; }
   .masthead { display: none !important; }
-  
-  /* Cacher les titres de sections du menu */
   .nav__list .nav__title { display: none !important; }
 
-  /* === MISE EN PAGE === */
-  /* Espacer la photo et les infos du menu */
+  /* 2. MISE EN PAGE */
   .author__urls-wrapper { margin-bottom: 60px !important; }
-  
-  /* Décoller la barre latérale du haut */
-  .sidebar { padding-top: 0px !important; }
-  
-  /* Bio plus petite */
+  .sidebar { padding-top: 0px !important; background-color: #f8f9fa !important; border-right: 1px solid #eaeaea !important; }
   .author__bio { margin-bottom: 10px !important; font-size: 0.9em !important; }
   .author__urls li { line-height: 1.2 !important; }
 
-  /* === MENU LATÉRAL (STYLE PRO) === */
+  /* 3. MENU LATÉRAL */
   .nav__list .nav__items {
     font-family: sans-serif;
     margin-top: 30px !important;
   }
-  
   .nav__list .nav__items a {
     display: block !important;
     font-size: 1.3em !important;      
@@ -63,44 +52,29 @@
     text-transform: uppercase !important; 
     letter-spacing: 1px !important;   
     padding: 12px 0 !important;       
-    color: #555555 !important;        /* Gris foncé (Mode Clair) */
+    color: #555555 !important;
     border-bottom: 1px solid #eee !important; 
     text-decoration: none !important;
   }
-  
   .nav__list .nav__items a:hover {
-    color: #000000 !important;        /* Noir au survol */
+    color: #000000 !important;
     padding-left: 10px !important;    
-    background-color: #f0f0f0 !important; /* Fond léger au survol */
+    background-color: #f0f0f0 !important;
     transition: all 0.3s ease;
   }
 
-  /* === FORCER LE MODE CLAIR (LIGHT MODE) === */
-  body {
+  /* 4. FORCER LE BLANC ABSOLU */
+  html, body {
     background-color: #ffffff !important;
     color: #333333 !important;
   }
-  
-  /* Sidebar grise claire */
-  .sidebar {
-    background-color: #f8f9fa !important;
-    border-right: 1px solid #eaeaea !important;
-  }
-
-  /* Contenu principal */
   .page__content {
     background-color: #ffffff !important;
   }
 
-  /* Titres en noir/gris */
-  h1, h2, h3, h4, .page__title {
-    color: #222 !important;
-  }
-  
-  /* Liens texte */
+  /* 5. TITRES & TEXTES */
+  h1, h2, h3, h4, .page__title { color: #222 !important; }
   a { color: #0077cc !important; }
-  
-  /* Code blocks fond gris */
   pre, code {
     background-color: #f6f8fa !important;
     color: #24292e !important;
