@@ -27,17 +27,21 @@
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<!-- STYLE FORCE LIGHT MODE -->
+<!-- STYLE FORCE MIDNIGHT TOKYO -->
 <style>
-  /* 1. SUPPRESSIONS */
+  /* 1. SUPPRESSIONS (Conservées de ta config précédente) */
   .page__footer { display: none !important; }
   .masthead { display: none !important; }
   .nav__list .nav__title { display: none !important; }
 
-  /* 2. MISE EN PAGE */
+  /* 2. MISE EN PAGE SIDEBAR */
   .author__urls-wrapper { margin-bottom: 60px !important; }
-  .sidebar { padding-top: 0px !important; background-color: #f8f9fa !important; border-right: 1px solid #eaeaea !important; }
-  .author__bio { margin-bottom: 10px !important; font-size: 0.9em !important; }
+  .sidebar { 
+      padding-top: 0px !important; 
+      background-color: #16161e !important; /* Tokyo Darker Background */
+      border-right: 1px solid #101014 !important; 
+  }
+  .author__bio { margin-bottom: 10px !important; font-size: 0.9em !important; color: #787c99 !important; }
   .author__urls li { line-height: 1.2 !important; }
 
   /* 3. MENU LATÉRAL */
@@ -50,34 +54,43 @@
     font-size: 1.3em !important;      
     font-weight: 800 !important;      
     text-transform: uppercase !important; 
-    letter-spacing: 1px !important;   
-    padding: 12px 0 !important;       
-    color: #555555 !important;
-    border-bottom: 1px solid #eee !important; 
+    letter-spacing: 1px !important;    
+    padding: 12px 0 !important;        
+    color: #a9b1d6 !important; /* Tokyo Text Color */
+    border-bottom: 1px solid #292e42 !important; /* Dark Border */
     text-decoration: none !important;
   }
   .nav__list .nav__items a:hover {
-    color: #000000 !important;
-    padding-left: 10px !important;    
-    background-color: #f0f0f0 !important;
+    color: #7aa2f7 !important; /* Tokyo Blue Neon */
+    padding-left: 10px !important;     
+    background-color: #1f2335 !important; /* Hover Background */
     transition: all 0.3s ease;
   }
 
-  /* 4. FORCER LE BLANC ABSOLU */
+  /* 4. FORCER LE FOND SOMBRE ABSOLU */
   html, body {
-    background-color: #ffffff !important;
-    color: #333333 !important;
+    background-color: #1a1b26 !important; /* Tokyo Main Background */
+    color: #a9b1d6 !important; /* Tokyo Main Text */
   }
   .page__content {
-    background-color: #ffffff !important;
+    background-color: #1a1b26 !important;
   }
 
   /* 5. TITRES & TEXTES */
-  h1, h2, h3, h4, .page__title { color: #222 !important; }
-  a { color: #0077cc !important; }
+  h1, h2, h3, h4, .page__title { color: #c0caf5 !important; } /* White-ish Blue */
+  
+  a { color: #7aa2f7 !important; } /* Link Color */
+  a:hover { color: #bb9af7 !important; text-decoration: underline; } /* Hover Purple */
+  
+  /* BLOCS DE CODE */
   pre, code {
-    background-color: #f6f8fa !important;
-    color: #24292e !important;
-    border: 1px solid #eaeaea !important;
+    background-color: #24283b !important;
+    color: #c0caf5 !important;
+    border: 1px solid #414868 !important;
   }
+  
+  /* Tables (au cas où) */
+  table { color: #a9b1d6 !important; }
+  th { border-bottom: 1px solid #414868 !important; }
+  td { border-bottom: 1px solid #292e42 !important; }
 </style>
