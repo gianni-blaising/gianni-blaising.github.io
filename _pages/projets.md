@@ -38,4 +38,4 @@ My study relies heavily on advanced course materials provided by the faculty at 
 
 
 * **Schneider, R. (2014).** *Convex Bodies: The Brunn-Minkowski Theory*. Cambridge University Press.  
-    (The standard reference book for the geometric aspects of the theory).
+   
