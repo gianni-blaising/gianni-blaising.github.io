@@ -17,6 +17,10 @@ I am **Gianni Blaising**, a third-year undergraduate student in Mathematics at *
 
 This website serves as a research log documenting my academic journey and my preparation for the **BMST 2026 program** within the 4EU+ Alliance.
 
+All primary sources and foundational materials supporting this research are listed in the 'References' section
+
+
+
 ---
 
 # Project Roadmap: The Brunn-Minkowski Inequality
