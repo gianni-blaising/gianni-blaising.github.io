@@ -75,3 +75,37 @@
     transition: all 0.3s ease;
   }
 </style>
+
+<style>
+  /* --- RÈGLES DU MODE SOMBRE --- */
+  body.dark-mode {
+    background-color: #1a1a1a !important; /* Fond gris très foncé */
+    color: #e0e0e0 !important; /* Texte blanc cassé */
+  }
+
+  /* La Sidebar en mode sombre */
+  body.dark-mode .sidebar {
+    background-color: #242424 !important;
+    border-right: 1px solid #333 !important;
+  }
+
+  /* Les liens en mode sombre */
+  body.dark-mode a {
+    color: #64b5f6 !important; /* Bleu clair lisible */
+  }
+  body.dark-mode .nav__list .nav__items a {
+    color: #e0e0e0 !important; /* Menu latéral blanc */
+  }
+  
+  /* Les boîtes blanches (articles) deviennent gris foncé */
+  body.dark-mode .archive__item-teaser, 
+  body.dark-mode .archive__item,
+  body.dark-mode .page__content {
+    background-color: transparent !important;
+  }
+  
+  /* Inversement des titres pour qu'ils restent lisibles */
+  body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+    color: #fff !important;
+  }
+</style>
