@@ -12,6 +12,9 @@ url: "https://gianni-blaising.github.io"
 baseurl: "" # Laisser vide si le repo s'appelle gianni-blaising.github.io
 repository: "gianni-blaising/gianni-blaising.github.io"
 
+# _config.yml
+minimal_mistakes_skin: "midnight"
+
 # --- Site Author (Barre latérale gauche) ---
 author:
   avatar: "profile-pp.png" # Mettez une photo nommée 'profile.png' dans le dossier /images/
