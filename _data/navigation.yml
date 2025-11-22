@@ -21,6 +21,8 @@ sidebar-links:
     
   #- title: "Portfolio"
    # url: /portfolio/
+  - title: "Motivation and roadmap"
+    url: /about/
         
   - title: "Posts"
     url: /year-archive/
