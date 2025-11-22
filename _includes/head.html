@@ -27,114 +27,42 @@
 </style>
 
 <style>
-  /* 1. SUPPRIMER LE NOM EN HAUT ET LA LIGNE BLANCHE */
-  .masthead .site-title {
-    display: none !important; /* Cache "Gianni Blaising" en haut */
-  }
+  /* 1. SUPPRIMER LA BARRE DU HAUT (Nom + Ligne blanche + Lune par défaut) */
   .masthead {
-    border-bottom: none !important; /* Enlève la ligne blanche */
-    background: transparent !important; /* Rend le fond transparent */
+    display: none !important;
   }
 
-  /* 2. REGLER L'ESPACEMENT DE LA BARRE LATERALE */
-  /* On décolle la photo du haut */
-  .sidebar {
-    padding-top: 0px !important; 
+  /* 2. ESPACER LA PHOTO ET LES INFOS DU MENU */
+  /* Ajoute un grand espace sous les infos de contact avant le menu */
+  .author__urls-wrapper {
+    margin-bottom: 60px !important; 
   }
   
-  /* On réduit la taille de la bio et des infos pour gagner de la place */
-  .author__bio {
-    margin-bottom: 10px !important;
-    font-size: 0.9em !important;
-  }
-  .author__urls-wrapper {
-    padding: 0 !important;
-  }
-  .author__urls li {
-    line-height: 1.2 !important; /* Resserre les lignes d'adresse/email */
-  }
-
-  /* 3. RENDRE LES SECTIONS (MENU) PLUS GROSSES ET DISTINCTES */
+  /* 3. RENDRE LE MENU (SECTIONS) PLUS GROS ET DISTINCT */
   .nav__list .nav__items {
-    margin-top: 60px !important; /* Espace entre le CV et le menu */
+    font-family: sans-serif; /* Police propre */
   }
   
   .nav__list .nav__items a {
-    font-size: 1.3em !important; /* Texte plus gros */
-    font-weight: 900 !important; /* Texte très gras */
+    display: block !important;
+    font-size: 1.4em !important;      /* Texte beaucoup plus gros */
+    font-weight: 800 !important;      /* Texte très gras */
     text-transform: uppercase !important; /* TOUT EN MAJUSCULE */
-    letter-spacing: 1px !important; /* Espacement des lettres */
-    padding: 10px 0 !important; /* Espace entre les liens */
-    color: #e0e0e0 !important; /* Couleur gris clair/blanc */
-    border-bottom: 1px solid #444 !important; /* Petite ligne de séparation subtile */
+    letter-spacing: 2px !important;   /* Espacement entre les lettres */
+    padding: 15px 0 !important;       /* Espace vertical entre les liens */
+    color: #b0b0b0 !important;        /* Gris clair par défaut */
+    border-bottom: 1px solid #444 !important; /* Ligne de séparation subtile */
+    text-decoration: none !important;
   }
   
   .nav__list .nav__items a:hover {
-    color: #fff !important; /* Blanc pur au survol */
-    padding-left: 10px !important; /* Petit effet de décalage au survol */
+    color: #ffffff !important;        /* Blanc pur au survol */
+    padding-left: 10px !important;    /* Petit décalage vers la droite au survol */
     transition: all 0.3s ease;
   }
-</style>
 
-<style>
-  /* --- RÈGLES DU MODE SOMBRE --- */
-  body.dark-mode {
-    background-color: #1a1a1a !important; /* Fond gris très foncé */
-    color: #e0e0e0 !important; /* Texte blanc cassé */
-  }
-
-  /* La Sidebar en mode sombre */
-  body.dark-mode .sidebar {
-    background-color: #242424 !important;
-    border-right: 1px solid #333 !important;
-  }
-
-  /* Les liens en mode sombre */
-  body.dark-mode a {
-    color: #64b5f6 !important; /* Bleu clair lisible */
-  }
-  body.dark-mode .nav__list .nav__items a {
-    color: #e0e0e0 !important; /* Menu latéral blanc */
-  }
-  
-  /* Les boîtes blanches (articles) deviennent gris foncé */
-  body.dark-mode .archive__item-teaser, 
-  body.dark-mode .archive__item,
-  body.dark-mode .page__content {
-    background-color: transparent !important;
-  }
-  
-  /* Inversement des titres pour qu'ils restent lisibles */
-  body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
-    color: #fff !important;
-  }
-</style>
-
-<style>
-  /* === COULEURS DU MODE SOMBRE === */
-  body.dark-mode {
-    background-color: #252a34 !important; /* Fond gris foncé */
-    color: #eaeaea !important; /* Texte clair */
-  }
-
-  /* La barre latérale en mode sombre */
-  body.dark-mode .sidebar {
-    background-color: #1a1c23 !important; /* Plus foncé que le fond */
-    border-right: 1px solid #333 !important;
-  }
-
-  /* Les liens du menu */
-  body.dark-mode .nav__list .nav__items a {
-    color: #ffffff !important;
-  }
-
-  /* Les titres */
-  body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
-    color: #fff !important;
-  }
-
-  /* Les boîtes de contenu (articles) */
-  body.dark-mode .archive__item-teaser {
-    background-color: #252a34 !important;
+  /* Titres de sections "Posts", "CV" (si le thème les affiche en petit) -> On les cache pour ne garder que les liens */
+  .nav__list .nav__title {
+    display: none !important;
   }
 </style>
