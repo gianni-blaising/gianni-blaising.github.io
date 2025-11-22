@@ -1,9 +1,9 @@
 ---
-permalink: /projets/
+permalink: /Roadmap/
 title: "Mes Projets"
 author_profile: true
 redirect_from: 
-  - /projets.html
+  - /Roadmap.html
 ---
 
 # Bienvenue sur mes projets
