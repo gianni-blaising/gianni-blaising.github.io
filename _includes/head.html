@@ -13,7 +13,9 @@
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 
 <style>
-  /* CACHE LE PIED DE PAGE ET LE SITEMAP */
+  /* --- 1. VOS STYLES PRÉCÉDENTS --- */
+  
+  /* Cache le pied de page et le sitemap */
   .page__footer {
     display: none !important;
     visibility: hidden !important;
@@ -21,20 +23,18 @@
     padding: 0 !important;
     margin: 0 !important;
   }
-</style>
 
-<style>
-  /* 1. SUPPRIMER LA BARRE DU HAUT */
+  /* Supprimer la barre du haut */
   .masthead {
     display: none !important;
   }
 
-  /* 2. ESPACER LA PHOTO ET LES INFOS DU MENU */
+  /* Espacer la photo et les infos du menu */
   .author__urls-wrapper {
     margin-bottom: 60px !important; 
   }
   
-  /* 3. RENDRE LE MENU (SECTIONS) PLUS GROS ET DISTINCT */
+  /* Style du menu de navigation */
   .nav__list .nav__items {
     font-family: sans-serif;
   }
@@ -57,8 +57,57 @@
     transition: all 0.3s ease;
   }
 
-  /* Titres de sections "Posts", "CV" -> On les cache */
+  /* Cacher les titres de sections */
   .nav__list .nav__title {
     display: none !important;
+  }
+
+  /* Indiquer que la photo de profil est cliquable */
+  .author__avatar img {
+    cursor: pointer;
+  }
+
+
+  /* --- 2. LE NOUVEAU CODE : DARK MODE --- */
+  
+  /* Fond et texte principal en mode sombre */
+  body.dark-mode {
+    background-color: #121212 !important; /* Noir profond */
+    color: #e0e0e0 !important;            /* Gris clair */
+  }
+
+  /* La barre latérale (sidebar) en mode sombre */
+  body.dark-mode .sidebar {
+    background-color: #1e1e1e !important; /* Un peu plus clair que le fond */
+  }
+
+  /* Les liens en mode sombre (pour qu'ils soient lisibles) */
+  body.dark-mode a {
+    color: #64b5f6 !important; /* Bleu clair */
+  }
+  
+  /* Les liens du menu latéral au survol en mode sombre */
+  body.dark-mode .nav__list .nav__items a:hover {
+    color: #64b5f6 !important;
+  }
+
+  /* Titres en blanc */
+  body.dark-mode h1, 
+  body.dark-mode h2, 
+  body.dark-mode h3,
+  body.dark-mode h4 {
+    color: #ffffff !important;
+  }
+
+  /* Zones de code ou citations en mode sombre */
+  body.dark-mode code,
+  body.dark-mode pre {
+    background-color: #2d2d2d !important;
+    color: #f8f8f2 !important;
+  }
+  
+  /* Cartes/Articles (si présents) */
+  body.dark-mode .archive__item-teaser {
+    background-color: #1e1e1e !important;
   }
 </style>
