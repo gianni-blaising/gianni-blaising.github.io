@@ -25,3 +25,53 @@
     margin: 0 !important;
   }
 </style>
+
+<style>
+  /* 1. SUPPRIMER LE NOM EN HAUT ET LA LIGNE BLANCHE */
+  .masthead .site-title {
+    display: none !important; /* Cache "Gianni Blaising" en haut */
+  }
+  .masthead {
+    border-bottom: none !important; /* Enlève la ligne blanche */
+    background: transparent !important; /* Rend le fond transparent */
+  }
+
+  /* 2. REGLER L'ESPACEMENT DE LA BARRE LATERALE */
+  /* On décolle la photo du haut */
+  .sidebar {
+    padding-top: 0px !important; 
+  }
+  
+  /* On réduit la taille de la bio et des infos pour gagner de la place */
+  .author__bio {
+    margin-bottom: 10px !important;
+    font-size: 0.9em !important;
+  }
+  .author__urls-wrapper {
+    padding: 0 !important;
+  }
+  .author__urls li {
+    line-height: 1.2 !important; /* Resserre les lignes d'adresse/email */
+  }
+
+  /* 3. RENDRE LES SECTIONS (MENU) PLUS GROSSES ET DISTINCTES */
+  .nav__list .nav__items {
+    margin-top: 30px !important; /* Espace entre le CV et le menu */
+  }
+  
+  .nav__list .nav__items a {
+    font-size: 1.3em !important; /* Texte plus gros */
+    font-weight: 900 !important; /* Texte très gras */
+    text-transform: uppercase !important; /* TOUT EN MAJUSCULE */
+    letter-spacing: 1px !important; /* Espacement des lettres */
+    padding: 10px 0 !important; /* Espace entre les liens */
+    color: #e0e0e0 !important; /* Couleur gris clair/blanc */
+    border-bottom: 1px solid #444 !important; /* Petite ligne de séparation subtile */
+  }
+  
+  .nav__list .nav__items a:hover {
+    color: #fff !important; /* Blanc pur au survol */
+    padding-left: 10px !important; /* Petit effet de décalage au survol */
+    transition: all 0.3s ease;
+  }
+</style>
