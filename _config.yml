@@ -16,8 +16,8 @@ repository: "gianni-blaising/gianni-blaising.github.io"
 author:
   avatar: "profile-pp.png" # Mettez une photo nommée 'profile.png' dans le dossier /images/
   name: "Gianni Blaising"
-  bio: "Third year BSc Student<br>Sorbonne University"
-  location: "Paris & Geneva France, Switzerland"
+  bio: "Third year BSc Student in math<br>Sorbonne University"
+  location: "Paris & Geneva<br>France & Switzerland"
   email: "gianni.blaising@etu.sorbonne-universite.fr"
   
   # Liens Académiques & Professionnels (J'ai supprimé les inutiles)
