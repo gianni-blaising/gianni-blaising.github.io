@@ -24,43 +24,37 @@
   </div>
 {% endif %}
 
-<!-- BOUTON DARK MODE (Fonctionnel) -->
-<div style="position: fixed; bottom: 20px; left: 20px; z-index: 9999;">
-  <button id="theme-toggle" title="Changer de thème" style="background: none; border: none; cursor: pointer;">
-    <i class="fas fa-moon" id="theme-icon" style="font-size: 1.5em; color: #888;"></i>
+<!-- BOUTON DARK MODE FLOTTANT (BAS GAUCHE) -->
+<div style="position: fixed; bottom: 30px; left: 30px; z-index: 9999;">
+  <button id="my-theme-toggle" aria-label="Toggle Dark Mode" style="background: none; border: 2px solid #555; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s;">
+    <i class="fas fa-moon" id="my-theme-icon" style="font-size: 1.2em; color: #fff;"></i>
   </button>
 </div>
 
 <script>
-  // 1. Récupérer les éléments
-  const toggleBtn = document.getElementById("theme-toggle");
-  const themeIcon = document.getElementById("theme-icon");
+  // Script autonome pour gérer le mode sombre
+  const btn = document.getElementById("my-theme-toggle");
+  const icon = document.getElementById("my-theme-icon");
   const body = document.body;
 
-  // 2. Vérifier si l'utilisateur a déjà choisi le mode sombre avant
+  // Vérifier la mémoire au chargement
   if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
-    themeIcon.classList.remove("fa-moon");
-    themeIcon.classList.add("fa-sun"); // Change la lune en soleil
-    themeIcon.style.color = "#fff";
+    body.classList.add("dark-mode"); // Applique la classe définie dans head.html
+    icon.className = "fas fa-sun";   // Change l'icône en soleil
+    btn.style.borderColor = "#fff";
   }
 
-  // 3. Action au clic
-  toggleBtn.addEventListener("click", () => {
+  btn.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
-
+    
     if (body.classList.contains("dark-mode")) {
-      // Si on vient d'activer le mode sombre
       localStorage.setItem("theme", "dark");
-      themeIcon.classList.remove("fa-moon");
-      themeIcon.classList.add("fa-sun");
-      themeIcon.style.color = "#fff";
+      icon.className = "fas fa-sun";
+      btn.style.borderColor = "#fff";
     } else {
-      // Si on revient en mode clair
       localStorage.setItem("theme", "light");
-      themeIcon.classList.remove("fa-sun");
-      themeIcon.classList.add("fa-moon");
-      themeIcon.style.color = "#888";
+      icon.className = "fas fa-moon";
+      btn.style.borderColor = "#555";
     }
   });
 </script>
