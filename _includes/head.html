@@ -1,10 +1,8 @@
-{% include base_path %}
-
 <meta charset="utf-8">
 
 {% include seo.html %}
 
-<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ site.baseurl }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,8 +10,7 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 
 <style>
   /* CACHE LE PIED DE PAGE ET LE SITEMAP */
@@ -27,41 +24,40 @@
 </style>
 
 <style>
-  /* 1. SUPPRIMER LA BARRE DU HAUT (Nom + Ligne blanche + Lune par défaut) */
+  /* 1. SUPPRIMER LA BARRE DU HAUT */
   .masthead {
     display: none !important;
   }
 
   /* 2. ESPACER LA PHOTO ET LES INFOS DU MENU */
-  /* Ajoute un grand espace sous les infos de contact avant le menu */
   .author__urls-wrapper {
     margin-bottom: 60px !important; 
   }
   
   /* 3. RENDRE LE MENU (SECTIONS) PLUS GROS ET DISTINCT */
   .nav__list .nav__items {
-    font-family: sans-serif; /* Police propre */
+    font-family: sans-serif;
   }
   
   .nav__list .nav__items a {
     display: block !important;
-    font-size: 1.4em !important;      /* Texte beaucoup plus gros */
-    font-weight: 800 !important;      /* Texte très gras */
-    text-transform: uppercase !important; /* TOUT EN MAJUSCULE */
-    letter-spacing: 2px !important;   /* Espacement entre les lettres */
-    padding: 15px 0 !important;       /* Espace vertical entre les liens */
-    color: #b0b0b0 !important;        /* Gris clair par défaut */
-    border-bottom: 1px solid #444 !important; /* Ligne de séparation subtile */
+    font-size: 1.4em !important;      
+    font-weight: 800 !important;      
+    text-transform: uppercase !important; 
+    letter-spacing: 2px !important;   
+    padding: 15px 0 !important;       
+    color: #b0b0b0 !important;        
+    border-bottom: 1px solid #444 !important; 
     text-decoration: none !important;
   }
   
   .nav__list .nav__items a:hover {
-    color: #ffffff !important;        /* Blanc pur au survol */
-    padding-left: 10px !important;    /* Petit décalage vers la droite au survol */
+    color: #ffffff !important;        
+    padding-left: 10px !important;    
     transition: all 0.3s ease;
   }
 
-  /* Titres de sections "Posts", "CV" (si le thème les affiche en petit) -> On les cache pour ne garder que les liens */
+  /* Titres de sections "Posts", "CV" -> On les cache */
   .nav__list .nav__title {
     display: none !important;
   }
