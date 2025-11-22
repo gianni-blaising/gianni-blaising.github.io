@@ -23,3 +23,18 @@
   {% endif %}
   </div>
 {% endif %}
+
+<!-- BOUTON DARK MODE EN BAS -->
+<div style="position: fixed; bottom: 20px; left: 20px; z-index: 999;">
+  <button id="theme-toggle" title="Togle Dark Mode" style="background: none; border: none; color: #fff; font-size: 1.5em; cursor: pointer;">
+    <i class="fas fa-moon"></i>
+  </button>
+  
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-theme"); // Adaptez selon comment votre thème gère le sombre
+      // Si le thème utilise un autre script, il faudra peut-être copier le script d'origine ici
+    });
+  </script>
+</div>
