@@ -136,6 +136,8 @@ defaults:
       comments: false
       share: true
       related: true
+      sidebar:
+        nav: "siderbar-links"
   # _pages
   - scope:
       path: ""
@@ -143,6 +145,8 @@ defaults:
     values:
       layout: single
       author_profile: true
+      sidebar:               
+        nav: "sidebar-links"
 
 
 # Sass/SCSS
