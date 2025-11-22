@@ -25,13 +25,15 @@ sidebar-links:
   - title: "Posts"
     url: /year-archive/
     
-  - title: "CV"
-    url: /cv/
+  
     
   # - title: "CV"
   #   url: /cv-json/
     
   # - title: "Guide"
    # url: /markdown/
-  - title: "Mes Projets"
+  - title: "References"
     url: /projets/
+
+  - title: "CV"
+    url: /cv/
