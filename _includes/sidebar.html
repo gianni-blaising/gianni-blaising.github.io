@@ -24,42 +24,43 @@
   </div>
 {% endif %}
 
-<!-- DARK MODE SWITCH -->
-<div style="position: fixed; bottom: 20px; left: 25px; z-index: 99999;">
-  <button id="theme-toggle" title="Switch Theme" style="background: none; border: none; cursor: pointer; outline: none; padding: 10px;">
-    <i class="fas fa-moon" id="theme-icon" style="font-size: 1.5em; color: #555;"></i>
+<!-- BOUTON DARK MODE (Fonctionnel) -->
+<div style="position: fixed; bottom: 20px; left: 20px; z-index: 9999;">
+  <button id="theme-toggle" title="Changer de thème" style="background: none; border: none; cursor: pointer;">
+    <i class="fas fa-moon" id="theme-icon" style="font-size: 1.5em; color: #888;"></i>
   </button>
 </div>
 
 <script>
+  // 1. Récupérer les éléments
   const toggleBtn = document.getElementById("theme-toggle");
   const themeIcon = document.getElementById("theme-icon");
   const body = document.body;
 
-  // 1. Vérifier si l'utilisateur a déjà choisi un mode
+  // 2. Vérifier si l'utilisateur a déjà choisi le mode sombre avant
   if (localStorage.getItem("theme") === "dark") {
     body.classList.add("dark-mode");
     themeIcon.classList.remove("fa-moon");
-    themeIcon.classList.add("fa-sun");
-    themeIcon.style.color = "#fff"; // Soleil blanc sur fond sombre
+    themeIcon.classList.add("fa-sun"); // Change la lune en soleil
+    themeIcon.style.color = "#fff";
   }
 
-  // 2. Action au clic
+  // 3. Action au clic
   toggleBtn.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
-    
+
     if (body.classList.contains("dark-mode")) {
-      // Passer en mode sombre
+      // Si on vient d'activer le mode sombre
       localStorage.setItem("theme", "dark");
       themeIcon.classList.remove("fa-moon");
       themeIcon.classList.add("fa-sun");
       themeIcon.style.color = "#fff";
     } else {
-      // Passer en mode clair
+      // Si on revient en mode clair
       localStorage.setItem("theme", "light");
       themeIcon.classList.remove("fa-sun");
       themeIcon.classList.add("fa-moon");
-      themeIcon.style.color = "#555"; // Lune grise sur fond clair
+      themeIcon.style.color = "#888";
     }
   });
 </script>
