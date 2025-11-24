@@ -25,7 +25,7 @@ All primary sources and foundational materials supporting this research are list
 
 # Project Roadmap: The Brunn-Minkowski Inequality
 
-> **My Goal:** To investigate the Brunn-Minkowski inequality not just as a geometric theorem, but as a crossroads between **analysis**, **geometry**, and **probability**.
+> **My Goal:** To analyze the Brunn-Minkowski inequality as the pivotal interface between convex geometry and functional analysis, establishing the theoretical framework required for high-dimensional probability.
 
 I have structured my work into four distinct phases, moving from fundamental tools to advanced applications.
 
@@ -36,7 +36,7 @@ I have structured my work into four distinct phases, moving from fundamental too
 To ensure rigor and refine my scientific writing skills, I initiated this project by consolidating the essential mathematical tools required for high-dimensional geometry. This preliminary phase covers:
 
 * **Measure Theory**
-    Revisiting the construction of the *Lebesgue measure* and the critical role of **Fubini's theorem** in slicing arguments.
+    Revisiting the construction of the *Lebesgue measure* based on *Prof. Jean-François Le Gall's* lecture notes, and emphasizing the critical role of **Fubini's theorem** in slicing arguments.
 * **Theory of Convex Bodies**
     Formalizing definitions of convexity, compact sets, and support functions in $\mathbb{R}^n$.
 * **The Minkowski Sum**
@@ -46,11 +46,10 @@ To ensure rigor and refine my scientific writing skills, I initiated this projec
 
 ## Phase 2: The Functional Approach (Core Research)
 
-Moving beyond classical geometric decompositions, I focus on the modern **analytical proof** of the inequality.
+Moving beyond classical geometric decompositions, I adopt the **functional analysis formalism**, which constitutes the prevailing framework in contemporary research.
 
-* **Key Tool:** The **Prékopa-Leindler inequality**.
-* **Methodology:** Studying the proof by induction on dimension $n$, based on the advanced lecture notes of *Prof. Dario Cordero-Erausquin*. This approach highlights the deep connection between the inequality and the **log-concavity of measures**.
-
+* **Key Tool:** The **Prékopa-Leindler inequality**. This theorem allows working directly with **log-concave measures**, providing a robust substitute for geometric intuition which becomes unreliable in high dimensions.
+* **Methodology:** Following *Prof. Dario Cordero-Erausquin’s* notes, I focus on the **Minkowski functional (gauge)**. This tool establishes a structural bijection between convex bodies and sub-linear functions, effectively translating geometric problems into analytical ones. Mastering this formalism is a prerequisite for investigating **concentration of measure**, aligning with the current standards in high-dimensional probability.
 ---
 
 ## Phase 3: High-Dimensional Phenomena
