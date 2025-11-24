@@ -1,7 +1,13 @@
-title: "Foundations and crash course"
-date: 2025-11-25
-permalink: /posts/crash course/
-tags:
+---
+layout: post
+title: "Phase 1: Foundations and Crash Course"
+date: 2025-11-23
+permalink: /posts/foundations-crash-course/
+categories: [Research, Mathematics]
+tags: [Brunn-Minkowski, Measure Theory, Convex Geometry]
+mathjax: true
+toc: true
+---
 
 
 # Phase 1: Foundations & Crash Course
@@ -90,11 +96,3 @@ The Minkowski sum can be visualized as **"sweeping"** one set around the other. 
 1.  **Regularization (Smoothing):** This is the most critical intuition for analysis. If $A$ is a "rough" set (e.g., a square with sharp corners) and $B$ is a "smooth" set (e.g., a ball), their sum $A+B$ will be smooth. The ball "rounds off" the corners of the square.
     * *In analysis terms:* This is strictly analogous to the **convolution** of functions. Just as convolving a discontinuous function with a Gaussian makes it smooth ($C^\infty$), adding a Euclidean ball to a set creates a smooth boundary.
 2.  **Linear Structure:** The Minkowski sum gives the space of convex bodies a "semi-group" structure. It allows us to treat geometric shapes almost like numbers that can be added and scaled.
-
-### Illustration
-
-
-
-* **Top Left (A):** A Square (Sharp corners, non-smooth).
-* **Top Right (B):** A Circle (Smooth, constant curvature).
-* **Bottom (A+B):** The resulting shape is a "rounded square." Notice how the sharp vertices of the square have been replaced by circular arcs with the radius of $B$. The sum has inherited the smoothness of $B$ and the global structure of $A$.
