@@ -5,6 +5,7 @@ permalink: /posts/foundations-crash-course/
 categories: [Research, Mathematics]
 tags: [Brunn-Minkowski, Measure Theory, Convex Geometry]
 mathjax: true
+image: /assets/images/convex geom.jpg
 
 ---
 
