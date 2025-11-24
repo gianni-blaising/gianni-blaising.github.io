@@ -9,7 +9,7 @@ image: /assets/images/convex geom.jpg
 
 ---
 
-
+<img src="/assets/images/convex geom.jpg" style="width:100%; object-fit: cover; height: 300px;">
 # Phase 1: Foundations & Crash Course
 
 Before tackling the Brunn-Minkowski inequality, we must establish a rigorous dictionary between geometry and analysis. This section synthesizes the essential prerequisites, ranging from the construction of volume to the algebraic structure of convex sets.
