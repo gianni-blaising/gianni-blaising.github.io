@@ -16,7 +16,7 @@ redirect_from:
 ---
 
 ## Profile
-Applied mathematics enthusiast with a strong interest in topology and geometric deep learning methods and high-dimensions problems.
+Applied mathematics enthusiast with a strong interest in topology, geometric deep learning methods and high-dimensions problems.
 
 ---
 
