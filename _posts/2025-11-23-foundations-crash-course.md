@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Phase 1: Foundations and Crash Course"
 date: 2025-11-23
 permalink: /posts/foundations-crash-course/
