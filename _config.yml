@@ -25,7 +25,7 @@ author:
   
   # Liens Académiques & Professionnels (J'ai supprimé les inutiles)
   #github: "gianni-blaising" # Assurez-vous que c'est votre vrai pseudo GitHub
-  linkedin: "" # Ajoutez votre lien si vous en avez un, sinon laissez vide
+  linkedin: "https://www.linkedin.com/in/g-b-0aa207322/" # Ajoutez votre lien si vous en avez un, sinon laissez vide
   # googlescholar: "" # À remplir plus tard en Master/PhD
   # researchgate: ""
   # orcid: ""
@@ -137,7 +137,7 @@ defaults:
       author_profile: true
       read_time: true
       comments: false
-      share: true
+      share: false
       related: true
       sidebar:
         nav: "siderbar-links"
