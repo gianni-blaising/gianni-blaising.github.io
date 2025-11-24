@@ -49,7 +49,7 @@ To ensure rigor and refine my scientific writing skills, I initiated this projec
 Moving beyond classical geometric decompositions, I adopt the **functional analysis formalism**, which constitutes the prevailing framework in contemporary research.
 
 * **Key Tool:** The **Prékopa-Leindler inequality**. This theorem allows working directly with **log-concave measures**, providing a robust substitute for geometric intuition which becomes unreliable in high dimensions.
-* *Methodology:* Following *Prof. Dario Cordero-Erausquin’s* notes, I focus on the *Minkowski functional (gauge)*. This tool establishes a structural bijection between convex bodies and sub-linear functions, effectively translating geometric problems into analytical ones. Mastering this formalism is a prerequisite for investigating **concentration of measure**, aligning with the current standards in high-dimensional probability.
+* **Methodology:** Following Prof. Dario Cordero-Erausquin’s notes, I focus on the **Minkowski functional (gauge)**. This tool establishes a structural bijection between convex bodies and sub-linear functions, effectively translating geometric problems into analytical ones. Mastering this formalism is a prerequisite for investigating **concentration of measure**, aligning with the current standards in high-dimensional probability.
 ---
 
 ## Phase 3: High-Dimensional Phenomena
