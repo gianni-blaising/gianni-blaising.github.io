@@ -27,8 +27,7 @@ All primary sources and foundational materials supporting this research are list
 
 > **My Goal:** To analyze the Brunn-Minkowski inequality as the pivotal interface between convex geometry and functional analysis, establishing the theoretical framework required for high-dimensional probability.
 
-I have structured my work into four distinct phases, moving from fundamental tools to advanced applications.
-
+I have organized my **learning path** into four phases, documenting my progression from fundamental tools to advanced applications.
 <br>
 
 ## Phase 1: Foundations & "Crash Course"
