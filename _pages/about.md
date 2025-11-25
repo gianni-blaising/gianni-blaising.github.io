@@ -32,40 +32,35 @@ I have structured my work into four distinct phases, moving from fundamental too
 <br>
 
 ## Phase 1: Foundations & "Crash Course"
-
 To ensure rigor and refine my scientific writing skills, I initiated this project by consolidating the essential mathematical tools required for convex geometry. This preliminary phase covers:
 
-* **Measure Theory**
-    Revisiting the construction of the *Lebesgue measure* based on *Prof. Jean-François Le Gall's* lecture notes, and emphasizing the critical role of **Fubini's theorem** in slicing arguments.
-* **Theory of Convex Bodies**
-    Formalizing definitions of convexity, compact sets, and support functions in $\mathbb{R}^n$.
-* **The Minkowski Sum**
-    Building geometric intuition on how set addition behaves (regularity, smoothing properties) compared to standard union operations.
+* **Measure Theory:** Revisiting the construction of the *Lebesgue measure* based on *Prof. Jean-François Le Gall’s* lecture notes, and emphasizing the critical role of **Fubini’s theorem** in slicing arguments.
+* **Theory of Convex Bodies:** Formalizing definitions of convexity, compact sets, and support functions in $\mathbb{R}^n$.
+* **The Minkowski Sum:** Building geometric intuition on how set addition behaves (regularity, smoothing properties) compared to standard union operations.
 
 ---
 
 ## Phase 2: The Functional Approach (Core Research)
-
+This is the most challenging part of the journey. I realized that geometric intuition (slicing shapes) becomes unreliable in high dimensions.
 Moving beyond classical geometric decompositions, I adopt the **functional analysis formalism**, which constitutes the prevailing framework in contemporary research.
 
 * **Key Tool:** The **Prékopa-Leindler inequality**. This theorem allows working directly with **log-concave measures**, providing a robust substitute for geometric intuition which becomes unreliable in high dimensions.
-* **Methodology:** Following Prof. Dario Cordero-Erausquin’s notes, I focus on the **Minkowski functional (gauge)**. This tool establishes a structural bijection between convex bodies and sub-linear functions, effectively translating geometric problems into analytical ones. Mastering this formalism is a prerequisite for investigating **concentration of measure**, aligning with the current standards in high-dimensional probability.
+* **Methodology:** Following *Prof. Dario Cordero-Erausquin’s* notes, I focus on the **Minkowski functional (gauge)**. This tool establishes a structural bijection between convex bodies and sub-linear functions, effectively translating geometric problems into analytical ones. Mastering this formalism is a prerequisite for investigating **concentration of measure**, aligning with the current standards in high-dimensional probability.
+
 ---
 
 ## Phase 3: High-Dimensional Phenomena
-
+After the heavy abstraction of Phase 2, I am using code to ground these concepts. I want to see if the theoretical predictions hold up in practice.
 I extend the theoretical analysis with computational experiments to visualize **counter-intuitive behaviors** in high dimensions.
 
 * **Simulations:** I replicate the *"Ball vs. Hypercube"* volume collapse example from the UE 4M073 course (Non-Parametric Statistics) taught by *Prof. Etienne Roquain*.
 * **Concentration of Measure:** Illustrating how mass concentrates near the boundary of convex sets as $d \to \infty$.
+* This serves as a numerical verification of the **log-concavity** properties I studied in Phase 2. Does the projection of a high-dimensional convex set actually look like a Gaussian? (Spoiler: Yes, and the theory explains why).
 
 ---
 
 ## Phase 4: Perspectives & Isoperimetry
-
 Finally, I connect these geometric insights to broader mathematical results.
 
-* **The Isoperimetric Inequality**
-    I will demonstrate how Brunn-Minkowski implies the isoperimetric inequality (*the Euclidean ball minimizes surface area for a fixed volume*).
-* **Applications**
-    Bridging the gap between pure mathematics and **Data Science** by exploring the **Johnson-Lindenstrauss Lemma**, a direct consequence of measure concentration.
+* **The Isoperimetric Inequality:** I will demonstrate how Brunn-Minkowski implies the isoperimetric inequality (*the Euclidean ball minimizes surface area for a fixed volume*).
+* **Applications:** Bridging the gap between pure mathematics and **Data Science** by exploring the **Johnson-Lindenstrauss Lemma**, a direct consequence of measure concentration.
