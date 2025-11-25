@@ -33,7 +33,7 @@ I have structured my work into four distinct phases, moving from fundamental too
 
 ## Phase 1: Foundations & "Crash Course"
 
-To ensure rigor and refine my scientific writing skills, I initiated this project by consolidating the essential mathematical tools required for high-dimensional geometry. This preliminary phase covers:
+To ensure rigor and refine my scientific writing skills, I initiated this project by consolidating the essential mathematical tools required for convex geometry. This preliminary phase covers:
 
 * **Measure Theory**
     Revisiting the construction of the *Lebesgue measure* based on *Prof. Jean-François Le Gall's* lecture notes, and emphasizing the critical role of **Fubini's theorem** in slicing arguments.
