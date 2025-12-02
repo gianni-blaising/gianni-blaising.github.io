@@ -39,7 +39,7 @@ The resolution lies in restricting attention to a sufficiently rich yet well-beh
 
 1. $E \in \mathcal{A}$,
 2. $A \in \mathcal{A} \Rightarrow A^c \in \mathcal{A}$,
-3. If $(A_n)_{n \in \mathbb{N}} \subset \mathcal{A}$, then $\bigcup_{n \in \mathbb{N}} A_n \in \mathcal{A}$.
+3. If $(A_n)\_{n \in \mathbb{N}} \subset \mathcal{A}$, then $\bigcup\_{n \in \mathbb{N}} A_n \in \mathcal{A}$.
 
 The pair $(E, \mathcal{A})$ is called a **measurable space**, and the elements of $\mathcal{A}$ are the **measurable sets**.
 
