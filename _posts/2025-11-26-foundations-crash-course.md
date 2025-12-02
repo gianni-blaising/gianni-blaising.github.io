@@ -162,7 +162,7 @@ Once the Lebesgue measure is established, integration proceeds via:
 2. **Nonnegative measurable functions**:
 
 $$
-\int f\, d\mu = \sup \left\{ \int h\, d\mu : h \text{ simple}, 0 \le h \le f \right\}.
+\int f\, d\mu = \sup \big\{ \int h\, d\mu : h \text{ simple}, 0 \le h \le f \big\}.
 $$
 
 3. **General integrable functions**: $f = f^+ - f^-$, with $\int f\, d\mu = \int f^+\, d\mu - \int f^-\, d\mu$ (when at least one is finite).
@@ -262,7 +262,7 @@ $$
 **Definition 2.1.3 (Convex Hull).** For any set $A \subseteq \mathbb{R}^n$, the **convex hull** $\text{conv}(A)$ is the smallest convex set containing $A$:
 
 $$
-\text{conv}(A) = \left\{ \sum_{i=1}^k \alpha_i x_i : k \in \mathbb{N},\; x_i \in A,\; \alpha_i \ge 0,\; \sum_i \alpha_i = 1 \right\}.
+\text{conv}(A) = \big\{ \sum_{i=1}^k \alpha_i x_i : k \in \mathbb{N},\; x_i \in A,\; \alpha_i \ge 0,\; \sum_i \alpha_i = 1 \big\}.
 $$
 
 **Theorem 2.1.4 (Carathéodory).** If $x \in \text{conv}(A)$ for some $A \subseteq \mathbb{R}^n$, then $x$ can be expressed as a convex combination of at most $n+1$ points from $A$.
