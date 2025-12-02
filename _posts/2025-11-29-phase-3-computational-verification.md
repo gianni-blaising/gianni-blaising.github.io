@@ -22,6 +22,7 @@ In dimension $d=2$, a unit circle inscribed in a square covers the majority of t
 
 The following simulation computes the volume ratio between the unit ball $\mathcal{B}_d$ and the unit cube $\mathcal{C}_d = [-1, 1]^d$ as $d$ increases.
 
+```markdown
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
