@@ -1,6 +1,6 @@
 ---
 title: "Phase 1: Foundations and Crash Course"
-date: 2025-11-26
+
 permalink: /posts/foundations-crash-course/
 categories: [Research, Mathematics]
 tags: [Brunn-Minkowski, Measure Theory, Convex Geometry]
