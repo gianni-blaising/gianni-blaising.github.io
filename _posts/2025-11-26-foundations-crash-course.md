@@ -414,11 +414,7 @@ Geometrically:
 - The four edges of the square are "pushed outward" by distance $r$, remaining straight.
 - The four corners are replaced by quarter-circles of radius $r$.
 
-The resulting shape is a **rounded rectangle** (or **stadium** in the degenerate case). See **Figure 1** below.
-
-<img src="/assets/images/minkowski_sum.png" alt="Minkowski sum of a square and a disk" width="500"/>
-
-**Figure 1.** *The Minkowski sum $S + D_r$ of a square $S$ and a disk $D_r$: the corners become quarter-circles, and the edges translate outward.*
+The resulting shape is a **rounded rectangle** (or **stadium** in the degenerate case).
 
 ---
 
