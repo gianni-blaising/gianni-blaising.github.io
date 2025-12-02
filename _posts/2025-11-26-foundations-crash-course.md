@@ -80,7 +80,7 @@ One can show that $\mathcal{B}(\mathbb{R}^n) = \mathcal{B}(\mathbb{R}) \otimes \
 2. **$\sigma$-additivity**: For any sequence $(A_n)_{n \in \mathbb{N}}$ of pairwise disjoint sets in $\mathcal{A}$,
 
 $$
-\mu\Bigl(\bigcup_{n \in \mathbb{N}} A_n\Bigr) = \sum_{n \in \mathbb{N}} \mu(A_n).
+\mu\left(\bigcup_{n \in \mathbb{N}} A_n\right) = \sum_{n \in \mathbb{N}} \mu(A_n).
 $$
 
 The triple $(E, \mathcal{A}, \mu)$ is called a **measure space**.
@@ -106,26 +106,26 @@ The Lebesgue measure on $\mathbb{R}^n$ is the canonical measure extending the in
 
 #### 1.4.1 Outer Measures
 
-**Definition 1.4.1 (Outer Measure).** An **outer measure** on $E$ is a function $\mu^* : \mathcal{P}(E) \to [0, +\infty]$ satisfying:
+**Definition 1.4.1 (Outer Measure).** An **outer measure** on $E$ is a function $\mu^{\ast} : \mathcal{P}(E) \to [0, +\infty]$ satisfying:
 
-1. $\mu^*(\varnothing) = 0$,
-2. **Monotonicity**: $A \subseteq B \Rightarrow \mu^*(A) \le \mu^*(B)$,
-3. **Countable subadditivity**: $\mu^*\bigl(\bigcup_n A_n\bigr) \le \sum_n \mu^*(A_n)$.
+1. $\mu^{\ast}(\varnothing) = 0$,
+2. **Monotonicity**: $A \subseteq B \Rightarrow \mu^{\ast}(A) \le \mu^{\ast}(B)$,
+3. **Countable subadditivity**: $\mu^{\ast}\left(\bigcup_n A_n\right) \le \sum_n \mu^{\ast}(A_n)$.
 
-**Intuition.** An outer measure provides an "overestimate" of volume defined on *all* subsets of $E$, but it is generally not additive. The key insight is to identify a subcollection of sets on which $\mu^*$ *is* additive.
+**Intuition.** An outer measure provides an "overestimate" of volume defined on *all* subsets of $E$, but it is generally not additive. The key insight is to identify a subcollection of sets on which $\mu^{\ast}$ *is* additive.
 
 #### 1.4.2 The Carathéodory Construction
 
-**Theorem 1.4.2 (Carathéodory).** Let $\mu^*$ be an outer measure on $E$. Define a set $A \subseteq E$ to be **$\mu^*$-measurable** if for every $B \subseteq E$:
+**Theorem 1.4.2 (Carathéodory).** Let $\mu^{\ast}$ be an outer measure on $E$. Define a set $A \subseteq E$ to be **$\mu^{\ast}$-measurable** if for every $B \subseteq E$:
 
 $$
-\mu^*(B) = \mu^*(B \cap A) + \mu^*(B \cap A^c).
+\mu^{\ast}(B) = \mu^{\ast}(B \cap A) + \mu^{\ast}(B \cap A^c).
 $$
 
 Then:
 
-1. The collection $\mathcal{M}(\mu^*)$ of $\mu^*$-measurable sets is a $\sigma$-algebra.
-2. The restriction $\mu := \mu^*|_{\mathcal{M}(\mu^*)}$ is a complete measure.
+1. The collection $\mathcal{M}(\mu^{\ast})$ of $\mu^{\ast}$-measurable sets is a $\sigma$-algebra.
+2. The restriction $\mu := \mu^{\ast}|_{\mathcal{M}(\mu^{\ast})}$ is a complete measure.
 
 **Remark.** The Carathéodory criterion extracts the "well-behaved" sets from the perspective of additivity.
 
@@ -134,13 +134,13 @@ Then:
 For $\mathbb{R}^n$, define the **Lebesgue outer measure** by covering with open rectangles (or cubes). For $n=1$:
 
 $$
-\lambda^*(A) := \inf\Bigl\{\sum_{k=1}^\infty (b_k - a_k) : A \subseteq \bigcup_{k=1}^\infty (a_k, b_k)\Bigr\}.
+\lambda^{\ast}(A) := \inf\left\{\sum_{k=1}^\infty (b_k - a_k) : A \subseteq \bigcup_{k=1}^\infty (a_k, b_k)\right\}.
 $$
 
-**Properties of $\lambda^*$:**
+**Properties of $\lambda^{\ast}$:**
 
-- For any interval $I = [a, b]$: $\lambda^*(I) = b - a$.
-- $\lambda^*$ is translation-invariant: $\lambda^*(A + x) = \lambda^*(A)$.
+- For any interval $I = [a, b]$: $\lambda^{\ast}(I) = b - a$.
+- $\lambda^{\ast}$ is translation-invariant: $\lambda^{\ast}(A + x) = \lambda^{\ast}(A)$.
 
 **Theorem 1.4.3 (Existence and Uniqueness of Lebesgue Measure).** There exists a unique measure $\lambda$ on $(\mathbb{R}^n, \mathcal{B}(\mathbb{R}^n))$ such that for every open rectangle $R = (a_1, b_1) \times \cdots \times (a_n, b_n)$:
 
@@ -162,7 +162,7 @@ Once the Lebesgue measure is established, integration proceeds via:
 2. **Nonnegative measurable functions**:
 
 $$
-\int f\, d\mu = \sup \{ \int h\, d\mu : h \text{ simple}, 0 \le h \le f \}.
+\int f\, d\mu = \sup \left\{ \int h\, d\mu : h \text{ simple}, 0 \le h \le f \right\}.
 $$
 
 3. **General integrable functions**: $f = f^+ - f^-$, with $\int f\, d\mu = \int f^+\, d\mu - \int f^-\, d\mu$ (when at least one is finite).
@@ -206,8 +206,8 @@ This measure is called the **product measure**.
 **Theorem 1.6.2 (Fubini–Tonelli).** Let $f : E_1 \times E_2 \to [0, +\infty]$ be measurable with respect to $\mathcal{A}_1 \otimes \mathcal{A}_2$. Then:
 
 $$
-\int_{E_1 \times E_2} f\, d(\mu_1 \otimes \mu_2) = \int_{E_1} \Bigl(\int_{E_2} f(x, y)\, d\mu_2(y)\Bigr)\, d\mu_1(x)
-= \int_{E_2} \Bigl(\int_{E_1} f(x, y)\, d\mu_1(x)\Bigr)\, d\mu_2(y).
+\int_{E_1 \times E_2} f\, d(\mu_1 \otimes \mu_2) = \int_{E_1} \left(\int_{E_2} f(x, y)\, d\mu_2(y)\right)\, d\mu_1(x)
+= \int_{E_2} \left(\int_{E_1} f(x, y)\, d\mu_1(x)\right)\, d\mu_2(y).
 $$
 
 For functions $f$ (possibly signed or complex) that are integrable with respect to the product measure, the equality of iterated integrals holds as well.
@@ -262,7 +262,7 @@ $$
 **Definition 2.1.3 (Convex Hull).** For any set $A \subseteq \mathbb{R}^n$, the **convex hull** $\text{conv}(A)$ is the smallest convex set containing $A$:
 
 $$
-\text{conv}(A) = \Bigl\{\sum_{i=1}^k \alpha_i x_i : k \in \mathbb{N},\; x_i \in A,\; \alpha_i \ge 0,\; \sum_i \alpha_i = 1\Bigr\}.
+\text{conv}(A) = \left\{ \sum_{i=1}^k \alpha_i x_i : k \in \mathbb{N},\; x_i \in A,\; \alpha_i \ge 0,\; \sum_i \alpha_i = 1 \right\}.
 $$
 
 **Theorem 2.1.4 (Carathéodory).** If $x \in \text{conv}(A)$ for some $A \subseteq \mathbb{R}^n$, then $x$ can be expressed as a convex combination of at most $n+1$ points from $A$.
