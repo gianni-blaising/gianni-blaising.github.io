@@ -160,7 +160,9 @@ This measure $\lambda$ is the **Lebesgue measure**.
 Once the Lebesgue measure is established, integration proceeds via:
 
 1. **Simple (step) functions**: $f = \sum_{i=1}^k \alpha_i \mathbf{1}_{A_i}$, with $\int f\, d\mu = \sum \alpha_i \mu(A_i)$.
-2. **Nonnegative measurable functions**: $\int f\, d\mu = \sup\bigl\{\int h\, d\mu : h \text{ simple}, 0 \le h \le f\bigr\}$.
+2. **Nonnegative measurable functions**: $\int f\, d\mu = \sup\left\{\int h\, d\mu : h \text{ simple}, 0 \le h \le f\right\}$.
+
+
 3. **General integrable functions**: $f = f^+ - f^-$, with $\int f\, d\mu = \int f^+\, d\mu - \int f^-\, d\mu$ (when at least one is finite).
 
 **Theorem 1.5.1 (Monotone Convergence Theorem).** Let $(f_n)$ be a sequence of nonnegative measurable functions with $f_n \uparrow f$. Then:
