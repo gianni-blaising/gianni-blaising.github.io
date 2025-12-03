@@ -22,8 +22,7 @@ In dimension $d=2$, a unit circle inscribed in a square covers the majority of t
 
 The following simulation computes the volume ratio between the unit ball $\mathcal{B}_d$ and the unit cube $\mathcal{C}_d = [-1, 1]^d$ as $d$ increases.
 
-```markdown
-{% highlight python %}
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.special import gamma
@@ -32,12 +31,8 @@ from scipy.special import gamma
 dims = np.arange(1, 21)
 
 # Calculate volumes
-# Vol(Ball) = pi^(d/2) / gamma(d/2 + 1)
 vol_ball = (np.pi**(dims/2)) / gamma(dims/2 + 1)
-
-# Vol(Cube) = 2^d (since side length is 2)
 vol_cube = 2.0**dims
-
 ratios = vol_ball / vol_cube
 
 # Visualization
@@ -50,4 +45,15 @@ plt.grid(True, alpha=0.3)
 plt.xticks(dims)
 plt.axhline(0, color='black', linewidth=0.8)
 plt.show()
-{% endhighlight %}
+```
+
+
+### Result
+
+![Graph showing the collapse of the volume ratio](/images/bl.png)
+*(Fig 1. The rapid decay of the ball's volume relative to the cube)*
+
+**Analytical Insight:**
+The decay is catastrophic. By dimension $d=10$, the ball occupies less than $0.3\%$ of the cube's volume. In the context of non-parametric statistics, this illustrates why neighborhood-based methods (like $k$-NN) struggle in high dimensions. The "neighborhood" effectively becomes empty, as the data is pushed into the sparse corners of the space.
+
+
