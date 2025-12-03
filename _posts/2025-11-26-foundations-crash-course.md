@@ -11,8 +11,6 @@ math: true
 
 **Phase 1 — Foundations**
 
-> *"The essence of mathematics is not to make simple things complicated, but to make complicated things simple."*
-> — Stan Gudder
 
 This document consolidates the essential mathematical prerequisites required for the rigorous study of convex geometry and the Brunn–Minkowski inequality. The material is organized into three interconnected pillars:
 
