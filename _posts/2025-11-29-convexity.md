@@ -1,5 +1,5 @@
 ---
-title: "Phase 2: -"
+title: "Phase 2: Convexity and Concentration: The Geometry of High Dimensions (Joint work with Elias Touil, former M2A student)"
 date: 2025-11-29
 permalink: /posts/convexity/
 categories: [Research, Mathematics]
